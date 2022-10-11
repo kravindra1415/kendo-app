@@ -3,6 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GridModule } from '@progress/kendo-angular-grid';
+
+
+
 
 @NgModule({
   declarations: [
@@ -10,7 +16,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DateInputsModule,
+    BrowserAnimationsModule,
+    GridModule
   ],
   providers: [],
   bootstrap: [AppComponent]

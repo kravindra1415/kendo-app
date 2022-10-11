@@ -13,6 +13,7 @@
   </kendo-grid-column>
 </kendo-grid> -->
 
-<kendo-dropdownlist [data]="dropDownItems" [defaultItem]="defaultItem" textField="text" valueField="value">
+<kendo-dropdownlist [data]="dropDownItems" [defaultItem]="defaultItem" textField="text" valueField="value"
+  (valueChange)="handleFilterChange($event)">
 
 </kendo-dropdownlist>

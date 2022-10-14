@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 import { SortDescriptor } from '@progress/kendo-data-query';
 import { Observable } from 'rxjs';
 import { ProductService } from './product.service';
 import { categories } from './data.categories'
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

@@ -1,0 +1,41 @@
+<div class="row example-wrapper" style="min-height: 450px;">
+  <div class="col-xs-12 col-md-6 example-col">
+
+    <p><b>DateInput</b></p>
+    <kendo-dateinput [value]="value"></kendo-dateinput>
+    <p>
+      (use <code>←</code> and <code>→</code> to navigate, <code>↑</code> and
+      <code>↓</code> to update)
+    </p>
+
+    <p><b>DatePicker</b></p>
+    <kendo-datepicker [value]="value"></kendo-datepicker>
+    <p>(use <code>Alt</code>+<code>↓</code> to open the Calendar)</p>
+
+    <p><b>TimePicker</b></p>
+    <kendo-timepicker [value]="value"></kendo-timepicker>
+
+    <p><b>DateRange</b></p>
+    <kendo-daterange>
+      <kendo-floatinglabel text="Start">
+        <kendo-dateinput kendoDateRangeStartInput [(value)]="range.start">
+        </kendo-dateinput>
+      </kendo-floatinglabel>
+    </kendo-daterange>
+    <kendo-daterange>
+      <kendo-floatinglabel text="End">
+        <kendo-dateinput kendoDateRangeEndInput [(value)]="range.end">
+        </kendo-dateinput>
+      </kendo-floatinglabel>
+    </kendo-daterange>
+
+    <div class="col-xs-12 col-md-6 example-col">
+      <p><b>Calendar</b></p>
+      <kendo-calendar [value]="value"></kendo-calendar>
+      <br />
+      <br />
+      <p><b>MultiViewCalendar</b></p>
+      <kendo-multiviewcalendar [value]="value" [disabled]="true"></kendo-multiviewcalendar>
+    </div>
+  </div>
+</div>

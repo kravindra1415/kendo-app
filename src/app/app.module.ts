@@ -15,14 +15,16 @@ import { LabelModule } from '@progress/kendo-angular-label';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { FilterFieldComponent } from './filter-field/filter-field.component';
 import { FilterModule } from '@progress/kendo-angular-filter';
+import { DateInputsComponent } from './date-inputs/date-inputs.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     FormFieldComponent,
-    FilterFieldComponent
-  ],
+    FilterFieldComponent,
+    DateInputsComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,9 +37,10 @@ import { FilterModule } from '@progress/kendo-angular-filter';
     ReactiveFormsModule,
     LayoutModule,
     LabelModule,
-    FilterModule
+    FilterModule,DateInputsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

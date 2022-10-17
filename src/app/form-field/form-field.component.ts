@@ -10,6 +10,10 @@ import { TextBoxComponent } from '@progress/kendo-angular-inputs';
 export class FormFieldComponent implements OnInit, AfterViewInit {
 
   @ViewChild('password') public textbox!: TextBoxComponent;
+
+  //for a calendar input
+  public model: any = { date: undefined };
+
   constructor() { }
 
   ngAfterViewInit(): void {
@@ -17,6 +21,8 @@ export class FormFieldComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    console.warn(this.form);
+    
   }
 
   toggleVisibiity() {
@@ -27,6 +33,7 @@ export class FormFieldComponent implements OnInit, AfterViewInit {
   public form: FormGroup = new FormGroup({
     username: new FormControl(),
     password: new FormControl(),
+    date: new FormControl(),
     loggedin: new FormControl()
   });
 

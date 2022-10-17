@@ -39,3 +39,19 @@
     </div>
   </div>
 </div>
+
+<!-- FormField Association -->
+<div class="example">
+  <form class="k-form" [formGroup]="form">
+    <kendo-formfield>
+      <kendo-label [for]="appointement" text="Appointement Date"></kendo-label>
+      <kendo-calendar #appointement formControlName="appointement" [min]="today">
+        <ng-template kendoCalendarMonthCellTemplate let-date>
+          <span [class.busy]="isBusy(date)">{{date.getDate()}}</span>
+        </ng-template>
+      </kendo-calendar>
+      <kendo-formhint>Select an available date</kendo-formhint>
+      <kendo-formerror>Required</kendo-formerror>
+    </kendo-formfield>
+  </form>
+</div>

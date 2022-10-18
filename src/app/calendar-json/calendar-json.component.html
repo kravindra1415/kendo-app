@@ -1,0 +1,10 @@
+<form #form="ngForm">
+  <div class="example-config">
+    <p>Form Model: {{user | json}}</p>
+    <p>Model: {{output}}</p>
+  </div>
+  <label>
+    Select Birthdate:
+    <kendo-calendar name="birthDate" [(ngModel)]="user.birthDate" (valueChange)="handleChange($event)"></kendo-calendar>
+  </label>
+</form>

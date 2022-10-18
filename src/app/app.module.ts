@@ -18,16 +18,18 @@ import { FilterModule } from '@progress/kendo-angular-filter';
 import { DateInputsComponent } from './date-inputs/date-inputs.component';
 import { CalendarEventComponent } from './calendar-event/calendar-event.component';
 import { EventLogComponent } from './event-log/event-log.component';
+import { CalendarJsonComponent } from './calendar-json/calendar-json.component';
 
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     FormFieldComponent,
     FilterFieldComponent,
     DateInputsComponent,
     CalendarEventComponent,
-      EventLogComponent
+      EventLogComponent,
+      CalendarJsonComponent
    ],
   imports: [
     BrowserModule,

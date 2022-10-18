@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <p>
+      <kendo-calendar (blur)="onBlur()" (focus)="onFocus()" (activeViewChange)="onActiveViewChange($event)"
+        (activeViewDateChange)="onActiveDateChange($event)" (valueChange)="onChange($event)"
+        (navigate)="onNavigate($event)">
+
+      </kendo-calendar>
+    </p>
+    <div style="margin-left:10px;">
+      <app-event-log title="Event log" [events]="events"></app-event-log>
+    </div>
+  </div>
+</div>

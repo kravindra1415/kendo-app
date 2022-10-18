@@ -41,11 +41,12 @@
 </div>
 
 <!-- FormField Association -->
+<!-- [weekNumber]="true" => it shows the week number in the calendar. -->
 <div class="example">
   <form class="k-form" [formGroup]="form">
     <kendo-formfield>
       <kendo-label [for]="appointement" text="Appointement Date"></kendo-label>
-      <kendo-calendar #appointement formControlName="appointement" [min]="today">
+      <kendo-calendar #appointement formControlName="appointement" [min]="today" [weekNumber]="true">
         <ng-template kendoCalendarMonthCellTemplate let-date>
           <span [class.busy]="isBusy(date)">{{date.getDate()}}</span>
         </ng-template>
@@ -55,3 +56,5 @@
     </kendo-formfield>
   </form>
 </div>
+
+<!-- Calendar Events -->

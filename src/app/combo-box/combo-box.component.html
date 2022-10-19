@@ -1,0 +1,9 @@
+<div class="example-config">
+  <input id="ac" type="checkbox" kendoCheckBox [(ngModel)]="allowCustom" />
+  <label for="ac">Allow custom values</label>
+</div>
+<div class="example">
+  <span>Favourite sport : </span>
+  <kendo-combobox [data]="listItems" [allowCustom]="allowCustom">
+  </kendo-combobox>
+</div>

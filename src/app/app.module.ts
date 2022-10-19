@@ -20,10 +20,11 @@ import { CalendarEventComponent } from './calendar-event/calendar-event.componen
 import { EventLogComponent } from './event-log/event-log.component';
 import { CalendarJsonComponent } from './calendar-json/calendar-json.component';
 import { DataQueryComponent } from './data-query/data-query.component';
+import { ComboBoxComponent } from './combo-box/combo-box.component';
 
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
     FormFieldComponent,
     FilterFieldComponent,
@@ -31,7 +32,8 @@ import { DataQueryComponent } from './data-query/data-query.component';
     CalendarEventComponent,
       EventLogComponent,
       CalendarJsonComponent,
-      DataQueryComponent
+      DataQueryComponent,
+      ComboBoxComponent
    ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { process, orderBy, filterBy } from '@progress/kendo-data-query';
+import { filterBy } from '@progress/kendo-data-query';
 
 const data = [
     { name: "pork", category: "Food", subcategory: "Meat" },

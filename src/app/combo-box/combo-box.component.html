@@ -7,3 +7,36 @@
   <kendo-combobox [data]="listItems" [allowCustom]="allowCustom">
   </kendo-combobox>
 </div>
+
+<!-- cascading combobox -->
+<div class="container-fluid example-wrapper">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 example-col">
+      <p>Category : </p>
+      <kendo-combobox [data]="dataCategory" placeholder="Select category...." [value]="selectedCategory"
+        textField="category" valueField="categoryId" (valueChange)="handleCategoryChange($event)">
+      </kendo-combobox>
+    </div>
+
+    <div class="col-xs-12 col-sm-4 example-col">
+      <p>Product : </p>
+      <kendo-combobox [disabled]="isDisabledProducts" placeholder="Select Product.." [data]="dataResultProducts"
+        [value]="selectedProduct" textField="productName" valueField="productId"
+        (valueChange)="handleProductChange($event)">
+      </kendo-combobox>
+    </div>
+
+    <div class="col-xs-12 col-sm-4 example-col">
+      <p>Order:</p>
+      <kendo-combobox [disabled]="isDisabledOrders" placeholder="Select orders..." [value]="selectedOrder"
+        [data]="dataResultOrders" textField="orderName" valueField="orderId" (valueChange)="handleOrderChange($event)">
+      </kendo-combobox>
+    </div>
+  </div>
+</div>
+
+<!-- grouping -->
+<p>grouping</p>
+<div class="example-wrapper">
+  <kendo-combobox [data]="groupedData" textField="name" valueField="name"></kendo-combobox>
+</div>

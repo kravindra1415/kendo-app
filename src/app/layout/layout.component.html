@@ -1,0 +1,33 @@
+<div class="list">
+  <div class="contact-list">Contacts</div>
+  <div class="contact" *ngFor="let contact of contactInitials">
+    <div class="k-hstack">
+      <kendo-avatar [initials]="contact.avatar"></kendo-avatar>
+      <div>
+        <h2>{{contact.name}}</h2>
+        <p>{{contact.position}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact" *ngFor="let contact of contactImages">
+    <div class="k-hstack">
+      <kendo-avatar [imageSrc]="contact.avatar"></kendo-avatar>
+      <div>
+        <h2>{{ contact.name }}</h2>
+        <p>{{ contact.position }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="k-hstack">
+      <kendo-avatar icon="user"> </kendo-avatar>
+      <div class="mate-info">
+        <h2>Unknown</h2>
+        <p>Not specified</p>
+      </div>
+      <div class="k-hstack"></div>
+    </div>
+  </div>
+</div>

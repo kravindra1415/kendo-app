@@ -126,5 +126,52 @@ export class ComboBoxComponent implements OnInit {
     { name: "Beef", category: "Food", subcategory: "Meat" },
   ];
 
-  public groupedData: GroupResult[] = groupBy(this.data, [{ field: "subcategory" }])
+  public groupedData: GroupResult[] = groupBy(this.data, [{ field: "subcategory" }]);
+
+  //virtulization
+  public dataInfo: Array<any> = this.createRandomData(1000);
+  public virtual: any = {
+    itemHeight: 28,
+  };
+
+  public createRandomData(count: number): any[] {
+    const firstNames = ["Nancy",
+      "Andrew",
+      "Janet",
+      "Margaret",
+      "Steven",
+      "Michael",
+      "Robert",
+      "Anne",
+      "Nige",
+    ];
+
+    const lastNames = [
+      "Davolio",
+      "Fuller",
+      "Leverling",
+      "Peacock",
+      "Buchanan",
+      "Suyama",
+      "King",
+      "Callahan",
+      "Dodsworth",
+      "White",
+    ];
+
+    const titles = [
+      "Accountant",
+      "Vice President, Sales",
+      "Sales Representative",
+      "Technical Support",
+      "Sales Manager",
+      "Web Designer",
+      "Software Developer",
+    ];
+
+    return Array(count).fill({}).map((_, idx) => ({
+      id: idx, name: `${idx + 1}${firstNames[Math.floor(Math.random() * firstNames.length)]}
+        ${lastNames[Math.floor(Math.random() * lastNames.length)]}`, title: titles[Math.floor(Math.random() * titles.length)],
+    }))
+  }
 }
